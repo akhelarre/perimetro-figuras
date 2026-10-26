@@ -1,0 +1,7 @@
+{
+  "name": "perimetro-figuras",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
