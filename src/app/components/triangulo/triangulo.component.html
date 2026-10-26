@@ -1,0 +1,47 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triángulo</ion-card-title>
+    <ion-card-subtitle>Perímetro (Triángulo Escaleno)</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>
+      El perímetro de un triángulo es la suma de las longitudes de sus tres lados.
+      Fórmula: <strong>P = a + b + c</strong>
+    </p>
+
+    <img src="assets/img/triangulo.png"
+         alt="Diagrama del triángulo escaleno"
+         loading="lazy"
+         style="max-width: 220px; margin: 16px auto; display: block;" />
+
+    <ion-item>
+      <div style="width: 100%; padding: 8px 0;">
+        <label style="display: block; font-size: 12px; color: var(--ion-color-medium); margin-bottom: 4px;">Lado A (cm)</label>
+        <input type="number" name="ladoAStr" [(ngModel)]="ladoAStr" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; background: transparent; color: inherit;" />
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div style="width: 100%; padding: 8px 0;">
+        <label style="display: block; font-size: 12px; color: var(--ion-color-medium); margin-bottom: 4px;">Lado B (cm)</label>
+        <input type="number" name="ladoBStr" [(ngModel)]="ladoBStr" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; background: transparent; color: inherit;" />
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <div style="width: 100%; padding: 8px 0;">
+        <label style="display: block; font-size: 12px; color: var(--ion-color-medium); margin-bottom: 4px;">Lado C (cm)</label>
+        <input type="number" name="ladoCStr" [(ngModel)]="ladoCStr" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; background: transparent; color: inherit;" />
+      </div>
+    </ion-item>
+
+    <ion-button expand="block" class="ion-margin-top" (click)="calcularPerimetro()">
+      CALCULAR EL PERÍMETRO
+    </ion-button>
+
+    <ion-text color="primary" *ngIf="resultado">
+      <p class="ion-margin-top"><strong>{{ resultado }}</strong></p>
+    </ion-text>
+  </ion-card-content>
+</ion-card>
